@@ -2,16 +2,17 @@ require 'test_helper'
 
 class LibPlayTest < ActionDispatch::IntegrationTest
   test "user can select and play a hashlib" do
+    word_set = WordSet.create(name: "Talk Like a Pirate", noun1: "", adjective1: "", verb1: "")
     visit root_url
-    click_link("Talk Like A Pirate")
 
-    word_set = WordSet.create(name: "Talk Like a Pirate", speech: { noun1: "", adjective1: "", verb1: ""})
+    click_link("Talk Like a Pirate")
 
-    assert_equal word_set_path(hashlib), current_path
-
-    fill_in("noun1", with: "polar bear")
-    fill_in("adjective2", with: "floral")
-    fill_in("verb1", with: "twirl")
+    assert_equal word_set_path(word_set.id), current_path
+save_and_open_page
+    fill_in("word_set_noun1", with: "polar bear")
+    fill_in("word_set_adjective1", with: "floral")
+    fill_in("word_set_verb1", with: "twirl")
+    save_and_open_page
 
     click_link_or_button("Make Me Laugh")
 

@@ -1,0 +1,7 @@
+<ul>
+  <% @word_sets.each do |word_set| %>
+    <li>
+      <%= link_to word_set.name, word_set_path(id: word_set.id) %>
+    </li>
+  <% end %>
+</ul>

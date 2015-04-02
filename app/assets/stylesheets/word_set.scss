@@ -1,3 +1,29 @@
-// Place all the styles related to the WordSet controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Metamorphous);
+
+h1 {
+  font-family: 'Metamorphous', cursive;
+  color: red;
+}
+
+#story-form {
+  margin: auto;
+  width: 700px;
+}
+
+.input-group {
+  padding-top: 15px;
+}
+
+#story {
+  margin: auto;
+  width: 700px;
+  font-size: 20px;
+}
+
+.word-holder {
+  color: red;
+  width: 30px;
+  border-bottom: 1px solid black;
+}

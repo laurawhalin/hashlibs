@@ -8,10 +8,6 @@ class WordSetController < ApplicationController
     redirect_to pirate_path
   end
 
-  def pirate
-    @word_set = WordSet.first
-  end
-
   private
 
   def word_params

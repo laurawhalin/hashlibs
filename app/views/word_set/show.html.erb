@@ -1,36 +1,126 @@
-<%= form_for :word_set, method: "put" do |f| %>
-  <%= f.label :noun1 %>
-  <%= f.text_field :noun1 %><br>
-  <%= f.label :adjective1 %>
-  <%= f.text_field :adjective1%><br>
-  <%= f.label :verb1 %>
-  <%= f.text_field :verb1 %><br>
-  <%= f.label :adverb1 %>
-  <%= f.text_field :adverb1 %>
-  <%= f.label :noun2 %>
-  <%= f.text_field :noun2 %>
-  <%= f.label :adjective2 %>
-  <%= f.text_field :adjective2 %>
-  <%= f.label :plural_noun1 %>
-  <%= f.text_field :plural_noun1 %>
-  <%= f.label :plural_noun2 %>
-  <%= f.text_field :plural_noun2 %>
-  <%= f.label :plural_noun3 %>
-  <%= f.text_field :plural_noun3 %>
-  <%= f.label :part_of_the_body1 %>
-  <%= f.text_field :part_of_the_body1 %>
-  <%= f.label :noun3 %>
-  <%= f.text_field :noun3 %>
-  <%= f.label :noun4 %>
-  <%= f.text_field :noun4 %>
-  <%= f.label :noun5 %>
-  <%= f.text_field :noun5 %>
-  <%= f.label :noun6 %>
-  <%= f.text_field :noun6 %>
-  <%= f.label :part_of_the_body2 %>
-  <%= f.text_field :part_of_the_body2 %>
-  <%= f.submit "Make Me Laugh" %>
-<% end %>
+<h1 class="text-center">How to Talk Like a Pirate</h1>
+<p id="story" class="text-left">Create values for the hashes below:</p>
 
-<!-- [noun1] [adjective1] [verb1] [adverb1] [noun2] [adjective2] [plural noun1] [plural noun2] [plural noun3]
-[part of the body1] [noun3] [noun4] [noun5] [noun6] [part of the body2] -->
+<div class="row">
+<div id="story-form">
+  <%= form_for :word_set, method: "put" do |f| %>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:noun1] =</span>
+             <%= f.text_field :noun1, id: "formnoun1", class: "form-control", placeholder: "noun" %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:adjective1] =</span>
+          <%= f.text_field :adjective1, id: "formadjective1", class: "form-control", placeholder: "adjective" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:verb1] =</span>
+          <%= f.text_field :verb1, id: "formverb1", class: "form-control", placeholder: "verb" %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:adverb1] =</span>
+          <%= f.text_field :adverb1, id: "formadverb1", class: "form-control", placeholder: "adverb" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:noun2] =</span>
+          <%= f.text_field :noun2, id: "formnoun2", class: "form-control", placeholder: "noun" %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:adjective2] =</span>
+          <%= f.text_field :adjective2, id: "formadjective2", class: "form-control", placeholder: "adjective" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:plural_noun1] =</span>
+          <%= f.text_field :plural_noun1, id: "formpluralnoun1", class: "form-control", placeholder: "plural noun" %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:plural_noun2] =</span>
+          <%= f.text_field :plural_noun2, id: "formpluralnoun2", class: "form-control", placeholder: "plural noun" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:plural_noun3] =</span>
+          <%= f.text_field :plural_noun3, id: "formpluralnoun3", class: "form-control", placeholder: "plural noun" %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:noun3] =</span>
+          <%= f.text_field :noun3, id: "formnoun3", class: "form-control", placeholder: "noun" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:noun4] =</span>
+          <%= f.text_field :noun4, id: "formnoun4", class: "form-control", placeholder: "noun" %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:noun5] =</span>
+          <%= f.text_field :noun5, id: "formnoun5", class: "form-control", placeholder: "noun" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:noun6] =</span>
+          <%= f.text_field :noun6, id: "formnoun6", class: "form-control", placeholder: "noun" %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="input-group">
+          <span class="input-group-addon">word_set[:part_of_the_body1] =</span>
+          <%= f.text_field :part_of_the_body2, id: "formbodypart1", class: "form-control", placeholder: "body part" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>
+
+<p id="story">
+Ye can always pretend to be a bloodthirsty <span id="noun1" class="word-holder"></span>, threatening everyone by
+waving yer <span id="adjective1" class="word-holder"></span> sword in the air, but until ye learn to <span id="verb1" class="word-holder"></span> like a
+pirate, ye’ll never be <span id="adverb1" class="word-holder"></span> accepted as an authentic <span id="noun2" class="word-holder"></span>. So here’s what
+ye do: Cleverly work into yer daily conversations <span id="adjective2" class="word-holder"></span> pirate phrases
+such as “Ahoy there, <span id="plural_noun1"  class="word-holder"></span>,” “avast, ye <span id="plural_noun2" class="word-holder"></span>”, and “Shiver me
+<span id="plural_noun3" class="word-holder"></span>”. Remember to drop all yer gs when ye say such words as sailin’,
+spittin’,  and fightin’. Once ye have the lingo down pat, it helps to wear a
+three-cornered <span id="noun3" class="word-holder"></span> on yer head, stash a/an <span id="noun4" class="word-holder"></span> in yer pants, and keep a/an
+<span id="noun5" class="word-holder"></span> perched atop yer <span id="bodypart1" class="word-holder"></span>. Aye, now ye be a real pirate!
+</p>
+</div> <!-- end top ros -->
